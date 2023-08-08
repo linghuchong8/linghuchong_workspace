@@ -1,0 +1,396 @@
+#Git安装
+#Git官网：
+https://git-scm.com/
+
+#初始化版本库
+#在项目文件夹内，执行 
+git init
+
+ #配置签名
+#1）工作中建议配置企业邮箱，学习中建议配置的邮箱为gitHub或者gitee的注册邮箱
+#2）配置当前项目作用域的签名user.name 和user.email 
+git config user.name "linghuchong8"
+git config user.email "linghuchong@111.com"
+#3）配置全局作用域签名
+git config --global user.name "linghuchong8"
+git config --global user.email "linghuchong@111.com"
+#）签名配置的存储位置
+#当前项目作用域签名配置的存储文件: 当前项目\.git目录下的config文件.
+#全局作用域签名配置的存储文件: C:\Users\当前系统用户名\目录下的.gitconfig文件
+
+#提交文件
+1）新建文件后，通过 git  status  进行查看文件状态
+文件名显示红色表示还未纳入版本管理
+mkdir src
+cd src
+vim Test.java
+cd ..
+git status
+
+#2）将文件添加到暂存区:   git  add  文件名 或者  git add 文件
+git add src
+git add Test.java
+git add *
+#3）再次git status 查看文件状态
+文件名显示绿色表示文件进入暂存区
+git status
+#4）提交暂存区文件到本地库
+ git commit ,自动进入到vim中，编写注释 ,完成提交或者也可以 git commit -m "注释内容", 直接带注释提交
+git commit
+git commit -m "测试"
+#报错：error: pathspec '–m' did not match any file(s) known to git
+#error: pathspec '测试' did not match any file(s) known to git
+ 用git commit -m "initial commit" #就好,符号用英文，中间-
+ git commit -m "测试"
+
+提交完成后再查看状态
+git status
+
+3.4  查看文件提交记录
+1）执行  git log 文件名  查看历史记录
+git log 
+2）通过 git log --pretty=oneline 文件名 简易信息查看
+git log --pretty=oneline
+
+3.5  回退历史
+1）git  reset --hard  HEAD^   回退到上一次提交. ^表示回退一步
+git  reset --hard  HEAD^
+2）git reset --hard HEAD~n  回退n次操作
+git reset --hard HEAD~1
+git reset --hard HEAD~2
+
+3.6  版本穿越
+1）进行查看历史记录的版本号，执行 git  reflog  文件名
+git  reflog
+结果：
+88b8da4 (HEAD -> master) HEAD@{0}: reset: moving to HEAD^
+1823d8a HEAD@{1}: commit: 测试
+88b8da4 (HEAD -> master) HEAD@{2}: commit (initial): initial commit
+
+2）执行 git  reset  --hard  版本号
+git  reset  --hard 1823d8a
+结果：
+HEAD is now at 1823d8a 测试
+
+3.7  还原文件
+1）git  checkout  -- 文件名 
+如果文件修改，还未进行git add的情况下，可以通过还原回到修改之前的状态. 如果已经提交了，只能使用git reset命令回退. 
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ cat src/Test.java
+结果：
+1111111111111111
+2222222222222222
+3333333333333333
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ vim src/Test.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ cat src/Test.java
+结果：
+A111111111HGG1111111
+2H22222GHG2222222222
+333JGHG3333333333333
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git checkout -- src/Test.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ cat src/Test.java
+结果：
+test
+
+3.8  删除文件
+1）如果进行了一些文件的误提交，先将本地文件删除，再执行git add 提交.
+ 58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ touch src/girlfriend.jpg
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git add src
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git commit -m "new file"
+结果：
+[master c971aa4] new file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/girlfriend.jpg
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ rm -rf src/girlfriend.jpg
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git status
+结果：
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    src/girlfriend.jpg
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git add src/girlfriend.jpg
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git commit -m "fix bug"
+结果：
+[master b376057] fix bug
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 src/girlfriend.jpg
+2）实际上，只要提交后的文件，在git中都有记录，每个用户可以通过git reflog查看到对应的版本号，还可以再回退到对应的版本.
+
+
+分支实战
+1）查看分支
+git branch –v  
+
+2）创建分支
+git branch <分支名>
+
+3）切换分支
+git checkout  <分支名>
+一步完成： git checkout  –b  <分支名>  创建分支并切换到该分支
+
+
+
+
+4）合并分支
+先切换到主干(要合并到的分支)   git  checkout  master
+再合并分支 git  merge  <分支名>
+
+5）删除分支
+先切换到主干   git  checkout  master
+git  branch -D  <分支名>
+结果：
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch dev
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch -v
+结果：
+  dev    b376057 fix bug
+* master b376057 fix bug
+  –v     b376057 fix bug
+
+  58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ touch src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git add src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git commit -m "add Hello.java"
+结果：
+[dev 93c26c3] add Hello.java
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git branch -v
+结果：
+* dev    93c26c3 add Hello.java
+  master b376057 fix bug
+  –v     b376057 fix bug
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ ll src
+结果：
+total 1
+-rw-r--r-- 1 58498 197609 0 Aug  8 23:09 Hello.java
+-rw-r--r-- 1 58498 197609 6 Aug  8 22:04 Test.java
+-rw-r--r-- 1 58498 197609 0 Aug  8 21:57 test.txt
+分支包含主分支的所有
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git checkout master
+结果：
+Switched to branch 'master'
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ ll src
+结果：
+total 1
+-rw-r--r-- 1 58498 197609 6 Aug  8 22:04 Test.java
+-rw-r--r-- 1 58498 197609 0 Aug  8 21:57 test.txt
+4）合并分支
+先切换到主干(要合并到的分支)   git  checkout  master
+再合并分支 git  merge  <分支名>
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git checkout master
+Switched to branch 'master'
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git merge dev
+Updating b376057..93c26c3
+Fast-forward
+ src/Hello.java | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch -v
+  结果：
+  dev    93c26c3 add Hello.java
+* master 93c26c3 add Hello.java
+  –v     b376057 fix bug
+5）删除分支
+先切换到主干   git  checkout  master
+git  branch -D  <分支名>
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch -D dev
+Deleted branch dev (was 93c26c3).
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch -v
+结果：
+* master 93c26c3 add Hello.java
+  –v     b376057 fix bug
+3.11 分支冲突
+1）如果两个分支同时修改一个文件，再进行合并分支时，就会出现冲突MERGING.
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ vim src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git add src/Hello.java
+warning: LF will be replaced by CRLF in src/Hello.java.
+The file will have its original line endings in your working directory
+
+58498@hadoop MINGW64 /d/bigdata-workspace (dev)
+$ git commit -m "add 1"
+[dev 982ba1a] add 1
+ 1 file changed, 1 insertion(+)
+####################################################################
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ vim src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git add src/Hello.java
+warning: LF will be replaced by CRLF in src/Hello.java.
+The file will have its original line endings in your working directory
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git commit -m "add2"
+[master 9d8c6ac] add2
+ 1 file changed, 2 insertions(+)
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch -v
+  dev    982ba1a add 1
+* master 9d8c6ac add2
+  –v     b376057 fix bug
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git merge dev
+Auto-merging src/Hello.java
+CONFLICT (content): Merge conflict in src/Hello.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+
+2）定位冲突
+通过git diff 定位冲突
+58498@hadoop MINGW64 /d/bigdata-workspace (master|MERGING)
+$ git diff
+diff --cc src/Hello.java
+index 51bbc1b,d31ba6f..0000000
+--- a/src/Hello.java
++++ b/src/Hello.java
+@@@ -1,2 -1,1 +1,6 @@@
+++<<<<<<< HEAD
+ +
+ +asjdqas
+++=======
++ qwqwqw
+++>>>>>>> dev
+
+
+3）解决冲突
+进入到冲突的文件，进行内容的修改.然后重新git add  与 git commit
+58498@hadoop MINGW64 /d/bigdata-workspace (master|MERGING)
+$ vim src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master|MERGING)
+$ git add src/Hello.java
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master|MERGING)
+$ git commit -m "fix merge"
+[master 4e731c7] fix merge
+
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git branch -v
+  dev    982ba1a add 1
+* master 4e731c7 fix merge
+  –v     b376057 fix bug
+  
+账号注册
+1）GitHub网址
+https://github.com/
+2）Gitee网址
+https://gitee.com/
+
+在git中创建project
+1）创建仓库
+https://github.com/linghuchong8?tab=repositories   
+工程地址：https://github.com/linghuchong8/linghuchong_workspace.git
+增加远程地址
+1）git remote add  <远端代号>   <远端地址> 。
+<远端代号> 是指远程链接的代号，一般直接用origin作代号，也可以自定义。
+ <远端地址> 默认远程链接的url
+git remote add origin https://github.com/linghuchong8/linghuchong_workspace.git
+推送到远端库
+1）git  push   <远端代号>    <本地分支名称>。
+<远端代号> 是指远程链接的代号。
+<分支名称>  是指要提交的分支名字，比如master。
+例： git  push  origin  master
+2）输入用户名
+
+3）输入密码
+
+4）推送成功后显示
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$ git  push  origin  master
+结果：
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (27/27), 1.98 KiB | 676.00 KiB/s, done.
+Total 27 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), done.
+To https://github.com/linghuchong8/linghuchong_workspace.git
+ * [new branch]      master -> master
+
+
+5）在Gitee中查看
+code
+
+从Gitee中克隆项目到本地
+git  clone   <远端地址>   <新项目目录名>。
+<远端地址> 是指远程链接的地址。
+<项目目录名>  是指为克隆的项目在本地新建的目录名称，可以不填，默认是Gitee的项目名。
+命令执行完后，会自动为这个远端地址建一个名为origin的代号。
+58498@hadoop MINGW64 /d/bigdata-workspace (master)
+$  git clone git@github.com:linghuchong8/linghuchong_workspace.git
+结果：
+Cloning into 'linghuchong_workspace'...
+remote: Enumerating objects: 27, done.
+remote: Counting objects: 100% (27/27), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 27 (delta 3), reused 27 (delta 3), pack-reused 0
+Receiving objects: 100% (27/27), done.
+Resolving deltas: 100% (3/3), done.
+
+将新的更新提交到Gitee[令狐冲]
+1）失败: 对于Gitee来说，不允许别的用户更新内容，必须将别的用户添加到合作伙伴中
+
+4.3.7 从Gitee中更新项目到本地库【岳不群】
+1）git  pull   <远端代号>   <远端分支名>。
+ <远端代号> 是指远程链接的代号。
+ <远端分支名>是指远端的分支名称，如master。 
+ 例 git pull origin master
+ 
+ git push origin master
