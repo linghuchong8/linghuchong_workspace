@@ -1,83 +1,83 @@
-#Git°²×°
-#Git¹ÙÍø£º
+#Gitå®‰è£…
+#Gitå®˜ç½‘ï¼š
 https://git-scm.com/
 
-#³õÊ¼»¯°æ±¾¿â
-#ÔÚÏîÄ¿ÎÄ¼ş¼ĞÄÚ£¬Ö´ĞĞ 
+#åˆå§‹åŒ–ç‰ˆæœ¬åº“
+#åœ¨é¡¹ç›®æ–‡ä»¶å¤¹å†…ï¼Œæ‰§è¡Œ 
 git init
 
- #ÅäÖÃÇ©Ãû
-#1£©¹¤×÷ÖĞ½¨ÒéÅäÖÃÆóÒµÓÊÏä£¬Ñ§Ï°ÖĞ½¨ÒéÅäÖÃµÄÓÊÏäÎªgitHub»òÕßgiteeµÄ×¢²áÓÊÏä
-#2£©ÅäÖÃµ±Ç°ÏîÄ¿×÷ÓÃÓòµÄÇ©Ãûuser.name ºÍuser.email 
+ #é…ç½®ç­¾å
+#1ï¼‰å·¥ä½œä¸­å»ºè®®é…ç½®ä¼ä¸šé‚®ç®±ï¼Œå­¦ä¹ ä¸­å»ºè®®é…ç½®çš„é‚®ç®±ä¸ºgitHubæˆ–è€…giteeçš„æ³¨å†Œé‚®ç®±
+#2ï¼‰é…ç½®å½“å‰é¡¹ç›®ä½œç”¨åŸŸçš„ç­¾åuser.name å’Œuser.email 
 git config user.name "linghuchong8"
 git config user.email "linghuchong@111.com"
-#3£©ÅäÖÃÈ«¾Ö×÷ÓÃÓòÇ©Ãû
+#3ï¼‰é…ç½®å…¨å±€ä½œç”¨åŸŸç­¾å
 git config --global user.name "linghuchong8"
 git config --global user.email "linghuchong@111.com"
-#£©Ç©ÃûÅäÖÃµÄ´æ´¢Î»ÖÃ
-#µ±Ç°ÏîÄ¿×÷ÓÃÓòÇ©ÃûÅäÖÃµÄ´æ´¢ÎÄ¼ş: µ±Ç°ÏîÄ¿\.gitÄ¿Â¼ÏÂµÄconfigÎÄ¼ş.
-#È«¾Ö×÷ÓÃÓòÇ©ÃûÅäÖÃµÄ´æ´¢ÎÄ¼ş: C:\Users\µ±Ç°ÏµÍ³ÓÃ»§Ãû\Ä¿Â¼ÏÂµÄ.gitconfigÎÄ¼ş
+#ï¼‰ç­¾åé…ç½®çš„å­˜å‚¨ä½ç½®
+#å½“å‰é¡¹ç›®ä½œç”¨åŸŸç­¾åé…ç½®çš„å­˜å‚¨æ–‡ä»¶: å½“å‰é¡¹ç›®\.gitç›®å½•ä¸‹çš„configæ–‡ä»¶.
+#å…¨å±€ä½œç”¨åŸŸç­¾åé…ç½®çš„å­˜å‚¨æ–‡ä»¶: C:\Users\å½“å‰ç³»ç»Ÿç”¨æˆ·å\ç›®å½•ä¸‹çš„.gitconfigæ–‡ä»¶
 
-#Ìá½»ÎÄ¼ş
-1£©ĞÂ½¨ÎÄ¼şºó£¬Í¨¹ı git  status  ½øĞĞ²é¿´ÎÄ¼ş×´Ì¬
-ÎÄ¼şÃûÏÔÊ¾ºìÉ«±íÊ¾»¹Î´ÄÉÈë°æ±¾¹ÜÀí
+#æäº¤æ–‡ä»¶
+1ï¼‰æ–°å»ºæ–‡ä»¶åï¼Œé€šè¿‡ git  status  è¿›è¡ŒæŸ¥çœ‹æ–‡ä»¶çŠ¶æ€
+æ–‡ä»¶åæ˜¾ç¤ºçº¢è‰²è¡¨ç¤ºè¿˜æœªçº³å…¥ç‰ˆæœ¬ç®¡ç†
 mkdir src
 cd src
 vim Test.java
 cd ..
 git status
 
-#2£©½«ÎÄ¼şÌí¼Óµ½Ôİ´æÇø:   git  add  ÎÄ¼şÃû »òÕß  git add ÎÄ¼ş
+#2ï¼‰å°†æ–‡ä»¶æ·»åŠ åˆ°æš‚å­˜åŒº:   git  add  æ–‡ä»¶å æˆ–è€…  git add æ–‡ä»¶
 git add src
 git add Test.java
 git add *
-#3£©ÔÙ´Îgit status ²é¿´ÎÄ¼ş×´Ì¬
-ÎÄ¼şÃûÏÔÊ¾ÂÌÉ«±íÊ¾ÎÄ¼ş½øÈëÔİ´æÇø
+#3ï¼‰å†æ¬¡git status æŸ¥çœ‹æ–‡ä»¶çŠ¶æ€
+æ–‡ä»¶åæ˜¾ç¤ºç»¿è‰²è¡¨ç¤ºæ–‡ä»¶è¿›å…¥æš‚å­˜åŒº
 git status
-#4£©Ìá½»Ôİ´æÇøÎÄ¼şµ½±¾µØ¿â
- git commit ,×Ô¶¯½øÈëµ½vimÖĞ£¬±àĞ´×¢ÊÍ ,Íê³ÉÌá½»»òÕßÒ²¿ÉÒÔ git commit -m "×¢ÊÍÄÚÈİ", Ö±½Ó´ø×¢ÊÍÌá½»
+#4ï¼‰æäº¤æš‚å­˜åŒºæ–‡ä»¶åˆ°æœ¬åœ°åº“
+ git commit ,è‡ªåŠ¨è¿›å…¥åˆ°vimä¸­ï¼Œç¼–å†™æ³¨é‡Š ,å®Œæˆæäº¤æˆ–è€…ä¹Ÿå¯ä»¥ git commit -m "æ³¨é‡Šå†…å®¹", ç›´æ¥å¸¦æ³¨é‡Šæäº¤
 git commit
-git commit -m "²âÊÔ"
-#±¨´í£ºerror: pathspec '¨Cm' did not match any file(s) known to git
-#error: pathspec '²âÊÔ' did not match any file(s) known to git
- ÓÃgit commit -m "initial commit" #¾ÍºÃ,·ûºÅÓÃÓ¢ÎÄ£¬ÖĞ¼ä-
- git commit -m "²âÊÔ"
+git commit -m "æµ‹è¯•"
+#æŠ¥é”™ï¼šerror: pathspec 'â€“m' did not match any file(s) known to git
+#error: pathspec 'æµ‹è¯•' did not match any file(s) known to git
+ ç”¨git commit -m "initial commit" #å°±å¥½,ç¬¦å·ç”¨è‹±æ–‡ï¼Œä¸­é—´-
+ git commit -m "æµ‹è¯•"
 
-Ìá½»Íê³ÉºóÔÙ²é¿´×´Ì¬
+æäº¤å®Œæˆåå†æŸ¥çœ‹çŠ¶æ€
 git status
 
-3.4  ²é¿´ÎÄ¼şÌá½»¼ÇÂ¼
-1£©Ö´ĞĞ  git log ÎÄ¼şÃû  ²é¿´ÀúÊ·¼ÇÂ¼
+3.4  æŸ¥çœ‹æ–‡ä»¶æäº¤è®°å½•
+1ï¼‰æ‰§è¡Œ  git log æ–‡ä»¶å  æŸ¥çœ‹å†å²è®°å½•
 git log 
-2£©Í¨¹ı git log --pretty=oneline ÎÄ¼şÃû ¼òÒ×ĞÅÏ¢²é¿´
+2ï¼‰é€šè¿‡ git log --pretty=oneline æ–‡ä»¶å ç®€æ˜“ä¿¡æ¯æŸ¥çœ‹
 git log --pretty=oneline
 
-3.5  »ØÍËÀúÊ·
-1£©git  reset --hard  HEAD^   »ØÍËµ½ÉÏÒ»´ÎÌá½». ^±íÊ¾»ØÍËÒ»²½
+3.5  å›é€€å†å²
+1ï¼‰git  reset --hard  HEAD^   å›é€€åˆ°ä¸Šä¸€æ¬¡æäº¤. ^è¡¨ç¤ºå›é€€ä¸€æ­¥
 git  reset --hard  HEAD^
-2£©git reset --hard HEAD~n  »ØÍËn´Î²Ù×÷
+2ï¼‰git reset --hard HEAD~n  å›é€€næ¬¡æ“ä½œ
 git reset --hard HEAD~1
 git reset --hard HEAD~2
 
-3.6  °æ±¾´©Ô½
-1£©½øĞĞ²é¿´ÀúÊ·¼ÇÂ¼µÄ°æ±¾ºÅ£¬Ö´ĞĞ git  reflog  ÎÄ¼şÃû
+3.6  ç‰ˆæœ¬ç©¿è¶Š
+1ï¼‰è¿›è¡ŒæŸ¥çœ‹å†å²è®°å½•çš„ç‰ˆæœ¬å·ï¼Œæ‰§è¡Œ git  reflog  æ–‡ä»¶å
 git  reflog
-½á¹û£º
+ç»“æœï¼š
 88b8da4 (HEAD -> master) HEAD@{0}: reset: moving to HEAD^
-1823d8a HEAD@{1}: commit: ²âÊÔ
+1823d8a HEAD@{1}: commit: æµ‹è¯•
 88b8da4 (HEAD -> master) HEAD@{2}: commit (initial): initial commit
 
-2£©Ö´ĞĞ git  reset  --hard  °æ±¾ºÅ
+2ï¼‰æ‰§è¡Œ git  reset  --hard  ç‰ˆæœ¬å·
 git  reset  --hard 1823d8a
-½á¹û£º
-HEAD is now at 1823d8a ²âÊÔ
+ç»“æœï¼š
+HEAD is now at 1823d8a æµ‹è¯•
 
-3.7  »¹Ô­ÎÄ¼ş
-1£©git  checkout  -- ÎÄ¼şÃû 
-Èç¹ûÎÄ¼şĞŞ¸Ä£¬»¹Î´½øĞĞgit addµÄÇé¿öÏÂ£¬¿ÉÒÔÍ¨¹ı»¹Ô­»Øµ½ĞŞ¸ÄÖ®Ç°µÄ×´Ì¬. Èç¹ûÒÑ¾­Ìá½»ÁË£¬Ö»ÄÜÊ¹ÓÃgit resetÃüÁî»ØÍË. 
+3.7  è¿˜åŸæ–‡ä»¶
+1ï¼‰git  checkout  -- æ–‡ä»¶å 
+å¦‚æœæ–‡ä»¶ä¿®æ”¹ï¼Œè¿˜æœªè¿›è¡Œgit addçš„æƒ…å†µä¸‹ï¼Œå¯ä»¥é€šè¿‡è¿˜åŸå›åˆ°ä¿®æ”¹ä¹‹å‰çš„çŠ¶æ€. å¦‚æœå·²ç»æäº¤äº†ï¼Œåªèƒ½ä½¿ç”¨git resetå‘½ä»¤å›é€€. 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ cat src/Test.java
-½á¹û£º
+ç»“æœï¼š
 1111111111111111
 2222222222222222
 3333333333333333
@@ -87,7 +87,7 @@ $ vim src/Test.java
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ cat src/Test.java
-½á¹û£º
+ç»“æœï¼š
 A111111111HGG1111111
 2H22222GHG2222222222
 333JGHG3333333333333
@@ -97,11 +97,11 @@ $ git checkout -- src/Test.java
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ cat src/Test.java
-½á¹û£º
+ç»“æœï¼š
 test
 
-3.8  É¾³ıÎÄ¼ş
-1£©Èç¹û½øĞĞÁËÒ»Ğ©ÎÄ¼şµÄÎóÌá½»£¬ÏÈ½«±¾µØÎÄ¼şÉ¾³ı£¬ÔÙÖ´ĞĞgit add Ìá½».
+3.8  åˆ é™¤æ–‡ä»¶
+1ï¼‰å¦‚æœè¿›è¡Œäº†ä¸€äº›æ–‡ä»¶çš„è¯¯æäº¤ï¼Œå…ˆå°†æœ¬åœ°æ–‡ä»¶åˆ é™¤ï¼Œå†æ‰§è¡Œgit add æäº¤.
  58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ touch src/girlfriend.jpg
 
@@ -110,7 +110,7 @@ $ git add src
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git commit -m "new file"
-½á¹û£º
+ç»“æœï¼š
 [master c971aa4] new file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 src/girlfriend.jpg
@@ -120,7 +120,7 @@ $ rm -rf src/girlfriend.jpg
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git status
-½á¹û£º
+ç»“æœï¼š
 On branch master
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
@@ -134,44 +134,44 @@ $ git add src/girlfriend.jpg
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git commit -m "fix bug"
-½á¹û£º
+ç»“æœï¼š
 [master b376057] fix bug
  1 file changed, 0 insertions(+), 0 deletions(-)
  delete mode 100644 src/girlfriend.jpg
-2£©Êµ¼ÊÉÏ£¬Ö»ÒªÌá½»ºóµÄÎÄ¼ş£¬ÔÚgitÖĞ¶¼ÓĞ¼ÇÂ¼£¬Ã¿¸öÓÃ»§¿ÉÒÔÍ¨¹ıgit reflog²é¿´µ½¶ÔÓ¦µÄ°æ±¾ºÅ£¬»¹¿ÉÒÔÔÙ»ØÍËµ½¶ÔÓ¦µÄ°æ±¾.
+2ï¼‰å®é™…ä¸Šï¼Œåªè¦æäº¤åçš„æ–‡ä»¶ï¼Œåœ¨gitä¸­éƒ½æœ‰è®°å½•ï¼Œæ¯ä¸ªç”¨æˆ·å¯ä»¥é€šè¿‡git reflogæŸ¥çœ‹åˆ°å¯¹åº”çš„ç‰ˆæœ¬å·ï¼Œè¿˜å¯ä»¥å†å›é€€åˆ°å¯¹åº”çš„ç‰ˆæœ¬.
 
 
-·ÖÖ§ÊµÕ½
-1£©²é¿´·ÖÖ§
-git branch ¨Cv  
+åˆ†æ”¯å®æˆ˜
+1ï¼‰æŸ¥çœ‹åˆ†æ”¯
+git branch â€“v  
 
-2£©´´½¨·ÖÖ§
-git branch <·ÖÖ§Ãû>
+2ï¼‰åˆ›å»ºåˆ†æ”¯
+git branch <åˆ†æ”¯å>
 
-3£©ÇĞ»»·ÖÖ§
-git checkout  <·ÖÖ§Ãû>
-Ò»²½Íê³É£º git checkout  ¨Cb  <·ÖÖ§Ãû>  ´´½¨·ÖÖ§²¢ÇĞ»»µ½¸Ã·ÖÖ§
-
-
+3ï¼‰åˆ‡æ¢åˆ†æ”¯
+git checkout  <åˆ†æ”¯å>
+ä¸€æ­¥å®Œæˆï¼š git checkout  â€“b  <åˆ†æ”¯å>  åˆ›å»ºåˆ†æ”¯å¹¶åˆ‡æ¢åˆ°è¯¥åˆ†æ”¯
 
 
-4£©ºÏ²¢·ÖÖ§
-ÏÈÇĞ»»µ½Ö÷¸É(ÒªºÏ²¢µ½µÄ·ÖÖ§)   git  checkout  master
-ÔÙºÏ²¢·ÖÖ§ git  merge  <·ÖÖ§Ãû>
 
-5£©É¾³ı·ÖÖ§
-ÏÈÇĞ»»µ½Ö÷¸É   git  checkout  master
-git  branch -D  <·ÖÖ§Ãû>
-½á¹û£º
+
+4ï¼‰åˆå¹¶åˆ†æ”¯
+å…ˆåˆ‡æ¢åˆ°ä¸»å¹²(è¦åˆå¹¶åˆ°çš„åˆ†æ”¯)   git  checkout  master
+å†åˆå¹¶åˆ†æ”¯ git  merge  <åˆ†æ”¯å>
+
+5ï¼‰åˆ é™¤åˆ†æ”¯
+å…ˆåˆ‡æ¢åˆ°ä¸»å¹²   git  checkout  master
+git  branch -D  <åˆ†æ”¯å>
+ç»“æœï¼š
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git branch dev
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git branch -v
-½á¹û£º
+ç»“æœï¼š
   dev    b376057 fix bug
 * master b376057 fix bug
-  ¨Cv     b376057 fix bug
+  â€“v     b376057 fix bug
 
   58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git checkout dev
@@ -185,40 +185,40 @@ $ git add src/Hello.java
 
 58498@hadoop MINGW64 /d/bigdata-workspace (dev)
 $ git commit -m "add Hello.java"
-½á¹û£º
+ç»“æœï¼š
 [dev 93c26c3] add Hello.java
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 src/Hello.java
 
 58498@hadoop MINGW64 /d/bigdata-workspace (dev)
 $ git branch -v
-½á¹û£º
+ç»“æœï¼š
 * dev    93c26c3 add Hello.java
   master b376057 fix bug
-  ¨Cv     b376057 fix bug
+  â€“v     b376057 fix bug
 
 58498@hadoop MINGW64 /d/bigdata-workspace (dev)
 $ ll src
-½á¹û£º
+ç»“æœï¼š
 total 1
 -rw-r--r-- 1 58498 197609 0 Aug  8 23:09 Hello.java
 -rw-r--r-- 1 58498 197609 6 Aug  8 22:04 Test.java
 -rw-r--r-- 1 58498 197609 0 Aug  8 21:57 test.txt
-·ÖÖ§°üº¬Ö÷·ÖÖ§µÄËùÓĞ
+åˆ†æ”¯åŒ…å«ä¸»åˆ†æ”¯çš„æ‰€æœ‰
 58498@hadoop MINGW64 /d/bigdata-workspace (dev)
 $ git checkout master
-½á¹û£º
+ç»“æœï¼š
 Switched to branch 'master'
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ ll src
-½á¹û£º
+ç»“æœï¼š
 total 1
 -rw-r--r-- 1 58498 197609 6 Aug  8 22:04 Test.java
 -rw-r--r-- 1 58498 197609 0 Aug  8 21:57 test.txt
-4£©ºÏ²¢·ÖÖ§
-ÏÈÇĞ»»µ½Ö÷¸É(ÒªºÏ²¢µ½µÄ·ÖÖ§)   git  checkout  master
-ÔÙºÏ²¢·ÖÖ§ git  merge  <·ÖÖ§Ãû>
+4ï¼‰åˆå¹¶åˆ†æ”¯
+å…ˆåˆ‡æ¢åˆ°ä¸»å¹²(è¦åˆå¹¶åˆ°çš„åˆ†æ”¯)   git  checkout  master
+å†åˆå¹¶åˆ†æ”¯ git  merge  <åˆ†æ”¯å>
 
 58498@hadoop MINGW64 /d/bigdata-workspace (dev)
 $ git checkout master
@@ -234,24 +234,24 @@ Fast-forward
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git branch -v
-  ½á¹û£º
+  ç»“æœï¼š
   dev    93c26c3 add Hello.java
 * master 93c26c3 add Hello.java
-  ¨Cv     b376057 fix bug
-5£©É¾³ı·ÖÖ§
-ÏÈÇĞ»»µ½Ö÷¸É   git  checkout  master
-git  branch -D  <·ÖÖ§Ãû>
+  â€“v     b376057 fix bug
+5ï¼‰åˆ é™¤åˆ†æ”¯
+å…ˆåˆ‡æ¢åˆ°ä¸»å¹²   git  checkout  master
+git  branch -D  <åˆ†æ”¯å>
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git branch -D dev
 Deleted branch dev (was 93c26c3).
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git branch -v
-½á¹û£º
+ç»“æœï¼š
 * master 93c26c3 add Hello.java
-  ¨Cv     b376057 fix bug
-3.11 ·ÖÖ§³åÍ»
-1£©Èç¹ûÁ½¸ö·ÖÖ§Í¬Ê±ĞŞ¸ÄÒ»¸öÎÄ¼ş£¬ÔÙ½øĞĞºÏ²¢·ÖÖ§Ê±£¬¾Í»á³öÏÖ³åÍ»MERGING.
+  â€“v     b376057 fix bug
+3.11 åˆ†æ”¯å†²çª
+1ï¼‰å¦‚æœä¸¤ä¸ªåˆ†æ”¯åŒæ—¶ä¿®æ”¹ä¸€ä¸ªæ–‡ä»¶ï¼Œå†è¿›è¡Œåˆå¹¶åˆ†æ”¯æ—¶ï¼Œå°±ä¼šå‡ºç°å†²çªMERGING.
 58498@hadoop MINGW64 /d/bigdata-workspace (dev)
 $ vim src/Hello.java
 
@@ -282,7 +282,7 @@ $ git commit -m "add2"
 $ git branch -v
   dev    982ba1a add 1
 * master 9d8c6ac add2
-  ¨Cv     b376057 fix bug
+  â€“v     b376057 fix bug
 
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git merge dev
@@ -291,8 +291,8 @@ CONFLICT (content): Merge conflict in src/Hello.java
 Automatic merge failed; fix conflicts and then commit the result.
 
 
-2£©¶¨Î»³åÍ»
-Í¨¹ıgit diff ¶¨Î»³åÍ»
+2ï¼‰å®šä½å†²çª
+é€šè¿‡git diff å®šä½å†²çª
 58498@hadoop MINGW64 /d/bigdata-workspace (master|MERGING)
 $ git diff
 diff --cc src/Hello.java
@@ -308,8 +308,8 @@ index 51bbc1b,d31ba6f..0000000
 ++>>>>>>> dev
 
 
-3£©½â¾ö³åÍ»
-½øÈëµ½³åÍ»µÄÎÄ¼ş£¬½øĞĞÄÚÈİµÄĞŞ¸Ä.È»ºóÖØĞÂgit add  Óë git commit
+3ï¼‰è§£å†³å†²çª
+è¿›å…¥åˆ°å†²çªçš„æ–‡ä»¶ï¼Œè¿›è¡Œå†…å®¹çš„ä¿®æ”¹.ç„¶åé‡æ–°git add  ä¸ git commit
 58498@hadoop MINGW64 /d/bigdata-workspace (master|MERGING)
 $ vim src/Hello.java
 
@@ -324,36 +324,36 @@ $ git commit -m "fix merge"
 $ git branch -v
   dev    982ba1a add 1
 * master 4e731c7 fix merge
-  ¨Cv     b376057 fix bug
+  â€“v     b376057 fix bug
   
-ÕËºÅ×¢²á
-1£©GitHubÍøÖ·
+è´¦å·æ³¨å†Œ
+1ï¼‰GitHubç½‘å€
 https://github.com/
-2£©GiteeÍøÖ·
+2ï¼‰Giteeç½‘å€
 https://gitee.com/
 
-ÔÚgitÖĞ´´½¨project
-1£©´´½¨²Ö¿â
+åœ¨gitä¸­åˆ›å»ºproject
+1ï¼‰åˆ›å»ºä»“åº“
 https://github.com/linghuchong8?tab=repositories   
-¹¤³ÌµØÖ·£ºhttps://github.com/linghuchong8/linghuchong_workspace.git
-Ôö¼ÓÔ¶³ÌµØÖ·
-1£©git remote add  <Ô¶¶Ë´úºÅ>   <Ô¶¶ËµØÖ·> ¡£
-<Ô¶¶Ë´úºÅ> ÊÇÖ¸Ô¶³ÌÁ´½ÓµÄ´úºÅ£¬Ò»°ãÖ±½ÓÓÃorigin×÷´úºÅ£¬Ò²¿ÉÒÔ×Ô¶¨Òå¡£
- <Ô¶¶ËµØÖ·> Ä¬ÈÏÔ¶³ÌÁ´½ÓµÄurl
+å·¥ç¨‹åœ°å€ï¼šhttps://github.com/linghuchong8/linghuchong_workspace.git
+å¢åŠ è¿œç¨‹åœ°å€
+1ï¼‰git remote add  <è¿œç«¯ä»£å·>   <è¿œç«¯åœ°å€> ã€‚
+<è¿œç«¯ä»£å·> æ˜¯æŒ‡è¿œç¨‹é“¾æ¥çš„ä»£å·ï¼Œä¸€èˆ¬ç›´æ¥ç”¨originä½œä»£å·ï¼Œä¹Ÿå¯ä»¥è‡ªå®šä¹‰ã€‚
+ <è¿œç«¯åœ°å€> é»˜è®¤è¿œç¨‹é“¾æ¥çš„url
 git remote add origin https://github.com/linghuchong8/linghuchong_workspace.git
-ÍÆËÍµ½Ô¶¶Ë¿â
-1£©git  push   <Ô¶¶Ë´úºÅ>    <±¾µØ·ÖÖ§Ãû³Æ>¡£
-<Ô¶¶Ë´úºÅ> ÊÇÖ¸Ô¶³ÌÁ´½ÓµÄ´úºÅ¡£
-<·ÖÖ§Ãû³Æ>  ÊÇÖ¸ÒªÌá½»µÄ·ÖÖ§Ãû×Ö£¬±ÈÈçmaster¡£
-Àı£º git  push  origin  master
-2£©ÊäÈëÓÃ»§Ãû
+æ¨é€åˆ°è¿œç«¯åº“
+1ï¼‰git  push   <è¿œç«¯ä»£å·>    <æœ¬åœ°åˆ†æ”¯åç§°>ã€‚
+<è¿œç«¯ä»£å·> æ˜¯æŒ‡è¿œç¨‹é“¾æ¥çš„ä»£å·ã€‚
+<åˆ†æ”¯åç§°>  æ˜¯æŒ‡è¦æäº¤çš„åˆ†æ”¯åå­—ï¼Œæ¯”å¦‚masterã€‚
+ä¾‹ï¼š git  push  origin  master
+2ï¼‰è¾“å…¥ç”¨æˆ·å
 
-3£©ÊäÈëÃÜÂë
+3ï¼‰è¾“å…¥å¯†ç 
 
-4£©ÍÆËÍ³É¹¦ºóÏÔÊ¾
+4ï¼‰æ¨é€æˆåŠŸåæ˜¾ç¤º
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $ git  push  origin  master
-½á¹û£º
+ç»“æœï¼š
 Enumerating objects: 27, done.
 Counting objects: 100% (27/27), done.
 Delta compression using up to 12 threads
@@ -365,17 +365,17 @@ To https://github.com/linghuchong8/linghuchong_workspace.git
  * [new branch]      master -> master
 
 
-5£©ÔÚGiteeÖĞ²é¿´
+5ï¼‰åœ¨Giteeä¸­æŸ¥çœ‹
 code
 
-´ÓGiteeÖĞ¿ËÂ¡ÏîÄ¿µ½±¾µØ
-git  clone   <Ô¶¶ËµØÖ·>   <ĞÂÏîÄ¿Ä¿Â¼Ãû>¡£
-<Ô¶¶ËµØÖ·> ÊÇÖ¸Ô¶³ÌÁ´½ÓµÄµØÖ·¡£
-<ÏîÄ¿Ä¿Â¼Ãû>  ÊÇÖ¸Îª¿ËÂ¡µÄÏîÄ¿ÔÚ±¾µØĞÂ½¨µÄÄ¿Â¼Ãû³Æ£¬¿ÉÒÔ²»Ìî£¬Ä¬ÈÏÊÇGiteeµÄÏîÄ¿Ãû¡£
-ÃüÁîÖ´ĞĞÍêºó£¬»á×Ô¶¯ÎªÕâ¸öÔ¶¶ËµØÖ·½¨Ò»¸öÃûÎªoriginµÄ´úºÅ¡£
+ä»Giteeä¸­å…‹éš†é¡¹ç›®åˆ°æœ¬åœ°
+git  clone   <è¿œç«¯åœ°å€>   <æ–°é¡¹ç›®ç›®å½•å>ã€‚
+<è¿œç«¯åœ°å€> æ˜¯æŒ‡è¿œç¨‹é“¾æ¥çš„åœ°å€ã€‚
+<é¡¹ç›®ç›®å½•å>  æ˜¯æŒ‡ä¸ºå…‹éš†çš„é¡¹ç›®åœ¨æœ¬åœ°æ–°å»ºçš„ç›®å½•åç§°ï¼Œå¯ä»¥ä¸å¡«ï¼Œé»˜è®¤æ˜¯Giteeçš„é¡¹ç›®åã€‚
+å‘½ä»¤æ‰§è¡Œå®Œåï¼Œä¼šè‡ªåŠ¨ä¸ºè¿™ä¸ªè¿œç«¯åœ°å€å»ºä¸€ä¸ªåä¸ºoriginçš„ä»£å·ã€‚
 58498@hadoop MINGW64 /d/bigdata-workspace (master)
 $  git clone git@github.com:linghuchong8/linghuchong_workspace.git
-½á¹û£º
+ç»“æœï¼š
 Cloning into 'linghuchong_workspace'...
 remote: Enumerating objects: 27, done.
 remote: Counting objects: 100% (27/27), done.
@@ -384,13 +384,37 @@ remote: Total 27 (delta 3), reused 27 (delta 3), pack-reused 0
 Receiving objects: 100% (27/27), done.
 Resolving deltas: 100% (3/3), done.
 
-½«ĞÂµÄ¸üĞÂÌá½»µ½Gitee[Áîºü³å]
-1£©Ê§°Ü: ¶ÔÓÚGiteeÀ´Ëµ£¬²»ÔÊĞí±ğµÄÓÃ»§¸üĞÂÄÚÈİ£¬±ØĞë½«±ğµÄÓÃ»§Ìí¼Óµ½ºÏ×÷»ï°éÖĞ
+å°†æ–°çš„æ›´æ–°æäº¤åˆ°Gitee[ä»¤ç‹å†²]
+1ï¼‰å¤±è´¥: å¯¹äºGiteeæ¥è¯´ï¼Œä¸å…è®¸åˆ«çš„ç”¨æˆ·æ›´æ–°å†…å®¹ï¼Œå¿…é¡»å°†åˆ«çš„ç”¨æˆ·æ·»åŠ åˆ°åˆä½œä¼™ä¼´ä¸­
 
-4.3.7 ´ÓGiteeÖĞ¸üĞÂÏîÄ¿µ½±¾µØ¿â¡¾ÔÀ²»Èº¡¿
-1£©git  pull   <Ô¶¶Ë´úºÅ>   <Ô¶¶Ë·ÖÖ§Ãû>¡£
- <Ô¶¶Ë´úºÅ> ÊÇÖ¸Ô¶³ÌÁ´½ÓµÄ´úºÅ¡£
- <Ô¶¶Ë·ÖÖ§Ãû>ÊÇÖ¸Ô¶¶ËµÄ·ÖÖ§Ãû³Æ£¬Èçmaster¡£ 
- Àı git pull origin master
+4.3.7 ä»Giteeä¸­æ›´æ–°é¡¹ç›®åˆ°æœ¬åœ°åº“ã€å²³ä¸ç¾¤ã€‘
+1ï¼‰git  pull   <è¿œç«¯ä»£å·>   <è¿œç«¯åˆ†æ”¯å>ã€‚
+ <è¿œç«¯ä»£å·> æ˜¯æŒ‡è¿œç¨‹é“¾æ¥çš„ä»£å·ã€‚
+ <è¿œç«¯åˆ†æ”¯å>æ˜¯æŒ‡è¿œç«¯çš„åˆ†æ”¯åç§°ï¼Œå¦‚masterã€‚ 
+ ä¾‹ git pull origin master
  
  git push origin master
+
+
+å®Œæ•´ç®€å•å·¥ä½œæµç¨‹ï¼š
+1.æäº¤æ”¹åŠ¨å‰æ›´æ–°åˆ†æ”¯
+åˆ‡æ¢åˆ°dev_yuebuqun
+æ›´æ–°æœ¬åœ°ä»“åº“è‡³æœ€æ–°æ”¹åŠ¨
+git pull origin dev_yuebuqun
+2.æäº¤æ”¹åŠ¨
+git add*
+git commit -m "æäº¤æ³¨é‡Š"
+git push origin dev_yuebuqun
+3.æ‹‰æœ€æ–°20220306
+åˆ‡æ¢åˆ°20220306
+git checkout 20220306
+4.åˆå¹¶20220306åˆ°å½“å‰åˆ†æ”¯
+åˆ‡æ¢åˆ°dev_yuebuqun
+git checkout dev_yuebuqun
+åˆå¹¶devåˆ†æ”¯åˆ°å½“å‰åˆ†æ”¯ï¼Œåˆå¹¶20220306åˆ°dev_yuebuqun
+git merge 20220306
+
+
+git branch -ræŸ¥çœ‹è¿œç¨‹æ‰€æœ‰çš„åˆ†æ”¯
+git fetch originæ›´æ–°è¿œç¨‹ä»“åº“åœ¨æœ¬åœ°çš„ç¼“å­˜
+git remote update origin --prune
