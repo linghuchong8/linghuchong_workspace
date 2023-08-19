@@ -120,3 +120,14 @@ select * from tb_student having age > 20;
 -- having子句对分组后的结果进行过滤和筛选
 -- 根据gender字段进行分组，统计分组条数大于2条以上的分组信息
 select gender, count(*) from tb_student group by gender having count(*) > 2;
+
+--按照性别分组求平均值
+--传统写法
+SELECT Gender, AVG(GPA) as avg_gpa FROM students GROUP BY Gender;
+--开窗函数
+--如果保留所有字段
+--我们当然可以用我们刚刚提到的聚合函数，然后再将结果join到初始表，但这需要两个步骤。
+--但如果我们使用窗口函数，我们则可以一步到位，并得到相同的结果：
+SELECT *, AVG(GPA) OVER (PARTITION BY Gender) as avg_gpa FROM students;
+
+
