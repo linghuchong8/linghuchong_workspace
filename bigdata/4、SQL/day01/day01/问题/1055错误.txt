@@ -1,0 +1,5 @@
+1055 - Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_itheima.tb_student.id' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+
+错误描述：出现以上问题的主要原因SELECT list is not in GROUP BY clause and contains nonaggregated column，简言之就是select中的字段没有出现在GROUP BY子句中。
+
+解决方案：SELECT尽量不要使用*号，另外出现在SELECT中的字段尽量要出现在GROUP BY子句中
